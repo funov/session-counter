@@ -1,0 +1,51 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/lowPollyFloppa
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/dancingPolishCow
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount?unique=true
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount?unique=false
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount?unique=123
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount/07-11-2022
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount/07-11-2022?unique=true
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/api/v1/statistics/sessionCount/07-11-2022?unique=false
+Accept: application/json
+
+###
