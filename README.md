@@ -30,14 +30,37 @@
 
 ## Примеры запросов к API статистики о посещениях
 
-* Статистика за все время (и уникальная, и обычная) `/api/v1/statistics/sessionCount`
-* Статистика за все время (уникальная) `/api/v1/statistics/sessionCount?unique=true`
-* Статистика за все время (обычная) `/api/v1/statistics/sessionCount?unique=false`
-* Вернет 422 `/api/v1/statistics/sessionCount?unique=123`
-* Статистика за 07-11-2022, за 11-2022, за 2022 (и уникальная, и обычная) `/api/v1/statistics/sessionCount/07-11-2022`
-* Статистика за 07-11-2022, за 11-2022, за 2022 (уникальная) `/api/v1/statistics/sessionCount/07-11-2022?unique=true`
-* Статистика за 07-11-2022, за 11-2022, за 2022 (обычная) `/api/v1/statistics/sessionCount/07-11-2022?unique=false`
-* Вернет 422 `/api/v1/statistics/sessionCount/abc`
+* Статистика за все время (и уникальная, и обычная)
+
+`/api/v1/statistics/sessionCount`
+
+* Статистика за все время (уникальная)
+
+`/api/v1/statistics/sessionCount?unique=true`
+
+* Статистика за все время (обычная)
+
+`/api/v1/statistics/sessionCount?unique=false`
+
+* Вернет 422
+
+`/api/v1/statistics/sessionCount?unique=123`
+
+* Статистика за 07-11-2022, за 11-2022, за 2022 (и уникальная, и обычная)
+
+`/api/v1/statistics/sessionCount/07-11-2022`
+
+* Статистика за 07-11-2022, за 11-2022, за 2022 (уникальная)
+
+`/api/v1/statistics/sessionCount/07-11-2022?unique=true`
+
+* Статистика за 07-11-2022, за 11-2022, за 2022 (обычная)
+
+`/api/v1/statistics/sessionCount/07-11-2022?unique=false`
+
+* Вернет 422 
+
+`/api/v1/statistics/sessionCount/abc`
 
 ## Состав
 
