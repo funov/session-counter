@@ -27,12 +27,12 @@ def _get_session_count(db: Session, is_unique: bool):
     if is_unique:
         query = db.query(
             models.VisitingSession.path,
-            func.count(models.VisitingSession.ip)
+            func.count(distinct(models.VisitingSession.ip))
         )
     else:
         query = db.query(
             models.VisitingSession.path,
-            func.count(distinct(models.VisitingSession.ip))
+            func.count(models.VisitingSession.ip)
         )
 
     return query.group_by(
