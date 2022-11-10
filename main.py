@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import Union
 
 from session_counter import session_counter
-from sql_app.database import get_db
+from sql_app.database import *
 from sql_app import models, crud
 
 from sqlalchemy.orm.session import Session
