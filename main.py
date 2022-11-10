@@ -72,19 +72,28 @@ def _get_db(kwargs: dict) -> Session:
 @app.get("/", response_class=HTMLResponse)
 @session_counter
 async def root(request: Request, db: Session = Depends(get_db)):
-    return templates.TemplateResponse("root.html", {"request": request})
+    return templates.TemplateResponse(
+        "root.html",
+        {"request": request}
+    )
 
 
 @app.get("/lowPollyFloppa", response_class=HTMLResponse)
 @session_counter
 async def floppa(request: Request, db: Session = Depends(get_db)):
-    return templates.TemplateResponse("low_polly_floppa.html", {"request": request})
+    return templates.TemplateResponse(
+        "low_polly_floppa.html",
+        {"request": request}
+    )
 
 
 @app.get("/dancingPolishCow")
 @session_counter
 async def cow(request: Request, db: Session = Depends(get_db)):
-    return templates.TemplateResponse("polish_cow.html", {"request": request})
+    return templates.TemplateResponse(
+        "polish_cow.html",
+        {"request": request}
+    )
 
 
 @app.get("/api/v1/statistics/sessionCount")
