@@ -1,0 +1,71 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 16px;
+    background: rgb(11, 234, 167);
+    background: linear-gradient(90deg, rgb(11, 234, 167) 23%, rgb(24, 97, 248) 83%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.description {
+    color: #000000;
+    padding: 60px;
+}
+
+.description p {
+    letter-spacing: 0.1em;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.description h1 {
+    font-size: 100px;
+    margin-top: -9px;
+    margin-bottom: 19px;
+    letter-spacing: 0.02em;
+}
+
+.buttons {
+    display: flex;
+    margin: auto;
+}
+
+.btn {
+    display: block;
+    border: 1px solid #000000;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 17px 47px;
+    letter-spacing: 0.1em;
+    width: 238px;
+    text-align: center;
+    transition: all 0.5s ease;
+    margin: auto;
+}
+
+.statisticsWidget {
+    margin: 50px 300px;
+    padding: 40px;
+    text-align: center;
+    display: block;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #000;
+}

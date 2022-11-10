@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Low Polly Floppa</title>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', path='/styles/low_polly_floppa.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="mainScreen">
+            <h1>Low Polly Floppa</h1>
+            <img id="lowPolyFloppa" src="https://media.tenor.com/z4llFHvQ2mwAAAAC/floppa-floppa-spin.gif" alt="rotating floppa">
+        </div>
+        <div class="buttons">
+		    <a href="/" class="btn">Back</a>
+	    </div>
+        <div class="statisticsWidget" id="statisticsWidget">
+            <h1>Loading...</h1>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', path='/scripts/update_session_count_widget.js') }}"></script>
+    </body>
+</html>

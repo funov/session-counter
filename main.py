@@ -11,11 +11,14 @@ from sqlalchemy.orm.session import Session
 
 from fastapi import Depends, FastAPI, Request
 from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
-from starlette.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 
 models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 
 def get_db():
@@ -69,19 +72,19 @@ def _get_db(kwargs: dict) -> Session:
 @app.get("/", response_class=HTMLResponse)
 @session_counter
 async def root(request: Request, db: Session = Depends(get_db)):
-    return FileResponse('html/root.html')
+    return templates.TemplateResponse("root.html", {"request": request})
 
 
 @app.get("/lowPollyFloppa", response_class=HTMLResponse)
 @session_counter
 async def floppa(request: Request, db: Session = Depends(get_db)):
-    return FileResponse('html/low_polly_floppa.html')
+    return templates.TemplateResponse("low_polly_floppa.html", {"request": request})
 
 
 @app.get("/dancingPolishCow")
 @session_counter
 async def cow(request: Request, db: Session = Depends(get_db)):
-    return FileResponse('html/polish_cow.html')
+    return templates.TemplateResponse("polish_cow.html", {"request": request})
 
 
 @app.get("/api/v1/statistics/sessionCount")

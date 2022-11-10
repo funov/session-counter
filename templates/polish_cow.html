@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Polish Cow</title>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', path='/styles/polish_cow.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="mainScreen">
+            <h1>Polish Cow</h1>
+            <img id="dancingPolishCow" src="https://media.tenor.com/WAFH6TX2VIYAAAAC/polish-cow.gif" alt="dancing cow">
+        </div>
+        <div class="buttons">
+		    <a href="/" class="btn">Back</a>
+	    </div>
+        <div class="statisticsWidget" id="statisticsWidget">
+            <h1>Loading...</h1>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', path='/scripts/update_session_count_widget.js') }}"></script>
+    </body>
+</html>

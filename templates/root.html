@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Session Counter</title>
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+	<link href="{{ url_for('static', path='/styles/root.css') }}" rel="stylesheet">
+</head>
+<body>
+	<div class="description">
+		<p>Be sure to look</p>
+		<h1>Funny gifs</h1>
+	</div>
+	<div class="buttons">
+		<a href="/lowPollyFloppa" class="btn">Low Polly Floppa</a>
+		<a href="/dancingPolishCow" class="btn">Polish Cow</a>
+	</div>
+	<div class="statisticsWidget" id="statisticsWidget">
+		<h1>Loading...</h1>
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', path='/scripts/update_session_count_widget.js') }}"></script>
+</body>
+</html>
